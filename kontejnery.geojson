@@ -1,0 +1,124 @@
+{
+	"type" : "FeatureCollection",
+	"name" : "ZPK_O_Kont_TOstan_b",
+	"crs" : {
+		"type" : "name",
+		"properties" : {
+			"name" : "EPSG:5514"
+		}
+	},
+	"features" : [
+        {
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -741687.4500369802, -1044981.8600061499 ]
+			},
+			"properties" : {
+				"OBJECTID" : 1,
+				"ID" : 5597,
+				"STATIONNUMBER" : "0002/-477",
+				"STATIONNAME" : "Máchova 1137/8",
+				"CITYDISTRICTRUIANCODE" : 500089,
+				"CITYDISTRICT" : "Praha 2",
+				"PRISTUP" : "obyvatelům domu"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -742768.5799589977, -1045515.6700182669 ]
+			},
+			"properties" : {
+				"OBJECTID" : 2,
+				"ID" : 5602,
+				"STATIONNUMBER" : "0002/-485",
+				"STATIONNAME" : "Nezamyslova 726/5",
+				"CITYDISTRICTRUIANCODE" : 500089,
+				"CITYDISTRICT" : "Praha 2",
+				"PRISTUP" : "obyvatelům domu"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -742359.1600263976, -1041788.7100318298 ]
+			},
+			"properties" : {
+				"OBJECTID" : 32,
+				"ID" : 6055,
+				"STATIONNUMBER" : "0007/ 069",
+				"STATIONNAME" : "Dobrovského 524/21",
+				"CITYDISTRICTRUIANCODE" : 500186,
+				"CITYDISTRICT" : "Praha 7",
+				"PRISTUP" : "volně"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -732129.9400104173, -1041304.9000114799 ]
+			},
+			"properties" : {
+				"OBJECTID" : 34,
+				"ID" : 6059,
+				"STATIONNUMBER" : "0014/ 109",
+				"STATIONNAME" : "Federova 1701/9",
+				"CITYDISTRICTRUIANCODE" : 547361,
+				"CITYDISTRICT" : "Praha 14",
+				"PRISTUP" : "volně"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -737094.4999931119, -1049268.8900003806 ]
+			},
+			"properties" : {
+				"OBJECTID" : 50,
+				"ID" : 6096,
+				"STATIONNUMBER" : "0011/ 223",
+				"STATIONNAME" : "Brechtova 846/41",
+				"CITYDISTRICTRUIANCODE" : 547034,
+				"CITYDISTRICT" : "Praha 11",
+				"PRISTUP" : "volně"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -751220.8499675132, -1046896.0499910191 ]
+			},
+			"properties" : {
+				"OBJECTID" : 51,
+				"ID" : 6097,
+				"STATIONNUMBER" : "1013/ 023",
+				"STATIONNAME" : "Na Výrovně 3031/21",
+				"CITYDISTRICTRUIANCODE" : 539635,
+				"CITYDISTRICT" : "Řeporyje",
+				"PRISTUP" : "volně"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ -735956.2299805023, -1047519.0499884561 ]
+			},
+			"properties" : {
+				"OBJECTID" : 60,
+				"ID" : 6140,
+				"STATIONNUMBER" : "0015/ 122",
+				"STATIONNAME" : "Fojtova 1650/2",
+				"CITYDISTRICTRUIANCODE" : 547387,
+				"CITYDISTRICT" : "Praha 15",
+				"PRISTUP" : "volně"
+			}
+		}
+	]
+}
