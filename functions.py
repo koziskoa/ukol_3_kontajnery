@@ -54,11 +54,9 @@ def choose_address (data_a):
     - zapíše do slovníku vybrané vlastnosti adresy: ID, číslo domu, ulice, souřadnice
     ## přehled jak vypadá strktura přepsaných adres
     "id":
-    {
-        "housenumber": hodnota,
+    {   "housenumber": hodnota,
         "street": hodnota,
-        "coordinates": hodnota
-    }
+        "coordinates": hodnota }
     """
     chosen_adr = {}         # založení slovníku pro adresy
     for adr in data_a ["features"]: 
@@ -73,7 +71,7 @@ def choose_address (data_a):
     return chosen_adr
 
 def transfer_coor (x,y):
-    """# Převod souřadnicového systému z WGS84 do JTSK
+    """## Převod souřadnicového systému z WGS84 do JTSK
     - vrátí dvojici čísel x a y v souřadnicovém systému JTSK"""
     return wgs2jtsk.transform(x,y)
         
@@ -87,7 +85,11 @@ def load_coor (path, position0 = 0, position1 = 1):
     return (x,y)
 
 def distance (point0, point1):
-    """# Výpočet vzdálenosti mezi 2 body
+    """## Výpočet vzdálenosti mezi 2 body
     -do parametru vstupují proměnné jakožto dvojice čísel"""
     dist = sqrt((point0[0]-point1[0])**2+(point0[1]-point1[1])**2)
     return dist
+
+def new_geojson (idk):
+    with open("adresy_kontejnery.geojson", "w") as outfile:
+        json.dump(idk, outfile)
