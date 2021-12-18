@@ -91,5 +91,7 @@ def distance (point0, point1):
     return dist
 
 def new_geojson (idk):
+    """## Vytvoří nový soubor GEOJSON
+    """
     with open("adresy_kontejnery.geojson", "w") as outfile:
         json.dump(idk, outfile)
