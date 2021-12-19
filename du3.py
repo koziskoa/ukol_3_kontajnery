@@ -32,6 +32,8 @@ for coor_adresa in dict_address:
 
     sum_dist += short_dist
     short_list.append(short_dist)
+    # vytvoření nového slovníku adres s atributem kontejner, 
+    # který nese id nejbližšího kontejneru
     dict_adr_cont[coor_adresa] = {\
         "hnumber": dict_address[coor_adresa]["housenumber"],\
         "street": dict_address[coor_adresa]["street"],\
@@ -47,15 +49,16 @@ for coor_adresa in dict_address:
     if short_dist > MAX_LIMIT:
         print("Vzdálenost k nejbližšímu kontejneru je větší než 10 km")
         quit()
+    # obnovení velké vzdálenosti pro správný výpočet nové nejmenší 
+    # vzdálenosti nové výchozí adresy
     short_dist = float(inf)
     
 result = int(sum_dist/counter_adr)      # průměrná vzdálenost       
-med = median(short_list)
-print(f"Načteno {counter} kontejnerů na tříděný odpad")
-print(f"        {counter_public} kontejnerů je veřejných\n")
+med = median(short_list)                # median nejbližších bzdáleností
+print(f"Načteno {counter} kontejnerů na tříděný odpad.")
+print(f"        {counter_public} kontejnerů je veřejných.\n")
 print(f"Počet adresních bodů: {counter_adr}\n")
 print(f"Průměrná vzdálenost ke kontejneru je {result} m.")
-print(f"Nejdale ke kontejneru je z adresy {max_street} {max_hnumber} a to {long_dist:.0f} m.")
+print(f"Nejdále ke kontejneru je z adresy {max_street} {max_hnumber} a to {long_dist:.0f} m.")
 print(f"Medián vzdálenosti ke kontejnerům: {med:.0f} m.\n")
-print(dict_adr_cont)
 new_geojson(dict_adr_cont)
