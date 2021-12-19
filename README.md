@@ -10,7 +10,7 @@ Funkčnost programu je podmíněna 2 vstupními soubory. Jeden s adresními body
 
   **Příklad**: `containers = open_load("soubor_adresy.geojson")`
   
-Po otevření a načtení souborů pomocí funkce "*open_load()*" následuje uložení dat do slovníků, aby nemusely být vstupní programy otevřené po celou dobu běhu programu. K tomu slouží **funkce "*dict_address*" a "*dict_containers()*"**, které si z původních souborů berou jen některé atributy. Pro adresy se ukládá ID: `@id`, jméno ulice: `addr:street`, číslo popisné: `addr:housenumber` a souřadnice: `"coordinates"`. Pro kontejnery se ukládá ID: `ID`, jméno ulice: `"STATIONNAME"`, typ přístupu: `PRISTUP` a souřadnice: `"coordinates"`. V tomto kroku dochází také u adres k převedení souřadnicového systému z WGS-84 do S-JTSK pomocí funkce "*transfer_coor()*", která vrací dvojici čísel.
+Po otevření a načtení souborů pomocí funkce "*open_load()*" následuje uložení dat do slovníků, aby nemusely být vstupní programy otevřené po celou dobu běhu programu. K tomu slouží **funkce "*dict_address*" a "*dict_containers()*"**, které si z původních souborů berou jen některé atributy. Pro adresy se ukládá ID: `@id`, jméno ulice: `addr:street`, číslo popisné: `addr:housenumber` a souřadnice: `"coordinates"`. Pro kontejnery se ukládá ID: `ID`, jméno ulice: `"STATIONNAME"`, typ přístupu: `PRISTUP` a souřadnice: `"coordinates"`. V tomto kroku dochází také u adres k převedení souřadnicového systému z WGS-84 do S-JTSK pomocí funkce "*transfer_coor()*", která vrací dvojici čísel. Souřadnice kontejnerů jsou již ve vstupním souboru v systému S-JTSK.
 
 Všechny funkce a jejich popis jsou v souboru **"*functions.py*"**.
 
