@@ -90,8 +90,8 @@ def distance (point0, point1):
     dist = sqrt((point0[0]-point1[0])**2+(point0[1]-point1[1])**2)
     return dist
 
-def new_geojson (idk):
-    """## Vytvoří nový soubor GEOJSON
+def new_geojson (dict_a_c):
+    """## Vytvoří ze slovníku nový soubor GEOJSON
     """
     with open("adresy_kontejnery.geojson", "w") as outfile:
-        json.dump(idk, outfile)
+        json.dump(dict_a_c, outfile)

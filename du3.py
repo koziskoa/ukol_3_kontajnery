@@ -35,7 +35,7 @@ for coor_adresa in dict_address:
     # vytvoření nového slovníku adres s atributem kontejner, 
     # který nese id nejbližšího kontejneru
     dict_adr_cont[coor_adresa] = {\
-        "hnumber": dict_address[coor_adresa]["housenumber"],\
+        "house_number": dict_address[coor_adresa]["housenumber"],\
         "street": dict_address[coor_adresa]["street"],\
         "coor": dict_address[coor_adresa]["coordinates"],\
         "kontejner": id_kont,\
@@ -60,5 +60,5 @@ print(f"        {counter_public} kontejnerů je veřejných.\n")
 print(f"Počet adresních bodů: {counter_adr}\n")
 print(f"Průměrná vzdálenost ke kontejneru je {result} m.")
 print(f"Nejdále ke kontejneru je z adresy {max_street} {max_hnumber} a to {long_dist:.0f} m.")
-print(f"Medián vzdálenosti ke kontejnerům: {med:.0f} m.\n")
+print(f"Medián vzdáleností ke kontejnerům: {med:.0f} m.\n")
 new_geojson(dict_adr_cont)
