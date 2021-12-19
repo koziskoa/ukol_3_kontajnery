@@ -7,7 +7,9 @@ Program zjistí průměrnou a maximální vzdálenost a medián z adresního bod
 
 ### Otevření vstupních dat a načtení do slovníků
 Funkčnost programu je podmíněna 2 vstupními soubory. Jeden s adresními body, které lze získat na následujícím [odkazu](http://overpass-turbo.eu/). Druhý soubor musí nést informace o kontejnerech na tříděný odpad. Data pro Prahu jsou dostupná na stránkách [pražského geoportálu](https://www.geoportalpraha.cz/cs/data/otevrena-data/8726EF0E-0834-463B-9E5F-FE09E62D73FB). Po stažení souborů je dobré se ujistit, že oba mají koncovku typu `.geojson` a jsou oba uloženy ve stejné složce, kde bude uložen kód programu. Vhodné je také přejmenovat soubor s adresami jako `adresy.geojson` a soubor s kontejnery jako `kontejnery.geojson`. Pokud se budou soubory jmenovat jinak, je nutné přepsat v kódu na řádku 5, nebo 6 ve funkci "*open_load*" jméno souboru.
+
   **Příklad**: `containers = open_load("soubor_adresy.geojson")`
+  
 Po otevření a načtení souborů pomocí funkce "*open_load()*" následuje uložení dat do slovníků, aby nemusely být vstupní programy otevřené po celou dobu běhu programu. K tomu slouží **funkce "*dict_address*" a "*dict_containers()*"**, které si z původních souborů berou jen některé atributy. Pro adresy se ukládá ID: `@id`, jméno ulice: `addr:street`, číslo popisné: `addr:housenumber` a souřadnice: `"coordinates"`. Pro kontejnery se ukládá ID: `ID`, jméno ulice: `"STATIONNAME"`, typ přístupu: `PRISTUP` a souřadnice: `"coordinates"`. V tomto kroku dochází také u adres k převedení souřadnicového systému z WGS-84 do S-JTSK pomocí funkce "*transfer_coor()*", která vrací dvojici čísel.
 
 Všechny funkce a jejich popis jsou v souboru **"*functions.py*"**.
